@@ -21,7 +21,7 @@ export default async function LinkPage() {
 			<div className="prose prose-ay dark:prose-invert max-w-4xl break-all">
 				{postContent}
 			</div>
-			<Comments />
+			{/* <Comments /> */}
 		</div>
 	);
 }

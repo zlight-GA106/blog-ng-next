@@ -2,6 +2,7 @@ import { Comments } from "@/components/Comments";
 import Copyright from "@/components/Copyright";
 import OutdateTip from "@/components/OutdateTip";
 import Toc from "@/components/Toc";
+import { config } from "@/libs/config";
 import { initCMS } from "@/libs/contents";
 import { generateMetadata } from "@/libs/generateMetadata";
 import parseMarkdown, { parseToc } from "@/libs/parseMarkdown";
@@ -44,8 +45,8 @@ export default async function PostPage({
 				<div className="prose prose-ay dark:prose-invert max-w-4xl break-all my-8">
 					{postContent}
 				</div>
-				<Copyright title={post.title} id={params.id} />
-				<Comments />
+				<Copyright title={post.title} id={params.id} author={config.author} />
+				{/* <Comments /> */}
 			</div>
 			<Toc toc={toc} />
 		</>
