@@ -7,6 +7,7 @@ import DarkModeSwitcher from "./DarkModeSwitcher";
 import getAvatar from "@/libs/getAvatar";
 import MobileNavSwitcher from "./MobileMenuSwitcher";
 import AllenyouLink from "./AllenyouLink";
+import { config } from "@/libs/config";
 
 export default function Navigation() {
 	const [shouldExpand, setShouldExpand] = useState(false);
@@ -52,7 +53,7 @@ export default function Navigation() {
 				])}>
 				<AllenyouLink href="/">
 					<img
-						src={`${getAvatar("allenyou1126@gmail.com")}?s=80`}
+						src={`${getAvatar(config.author.email)}?s=80`}
 						width={48}
 						height={48}
 						alt="Avatar"
@@ -72,11 +73,11 @@ export default function Navigation() {
 					<li>
 						<AllenyouLink href="/about/">关于</AllenyouLink>
 					</li>
-					<li>
+					{/* <li>
 						<AllenyouLink href="https://www.travellings.cn/go.html">
 							开往
 						</AllenyouLink>
-					</li>
+					</li> */}
 				</ul>
 				<MobileNavSwitcher />
 				<DarkModeSwitcher />

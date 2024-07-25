@@ -4,7 +4,10 @@ export const config = {
 		title: `秋实-Allenyou的小窝`,
 		description: "稻花香里说丰年，听取WA声一片",
 	},
-	author: "紫光-GA106",
+	author: {
+		name: "紫光-GA106",
+		email: "example@test.com",
+	},
 	comment: {
 		api: "https://waline.allenyou.wang/",
 	},

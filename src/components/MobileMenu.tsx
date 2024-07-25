@@ -5,6 +5,7 @@ import { connectString } from "@/libs/connectString";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import AllenyouLink from "./AllenyouLink";
+import { config } from "@/libs/config";
 
 export default function MobileMenu() {
 	const [vis, setVis] = useAtom(mobileMenuVis);
@@ -62,7 +63,7 @@ export default function MobileMenu() {
 				</li>
 			</ul>
 			<p className="text-xl align-baseline absolute bottom-4 left-4">
-				Copyright © 2024-{new Date().getFullYear()} 秋实-Allenyou
+				Copyright © 2024-{new Date().getFullYear()} {config.author.name}
 			</p>
 		</div>
 	);
