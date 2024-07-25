@@ -25,7 +25,7 @@ export default function RootLayout({
 				<Footer />
 				<GoToTop />
 				<MobileMenu />
-				<Matomo />
+				{/* <Matomo /> */}
 			</body>
 		</html>
 	);
