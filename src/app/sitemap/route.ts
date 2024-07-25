@@ -8,14 +8,6 @@ export async function GET() {
 		hostname: `https://${config.blog.hostname}`,
 		lastmodDateOnly: true,
 	});
-	// const feed = new RSS({
-	// 	title: config.blog.title,
-	// 	description: config.blog.description,
-	// 	feed_url: `https://${config.blog.hostname}/feed/`,
-	// 	language: "zh-CN",
-	// 	image_url: "",
-	// 	generator: "blog-ng-next by Allenyou (Based on Next.js & Tailwind CSS)",
-	// });
 	const cms = initCMS();
 	var links = cms.postIds
 		.map((id) => {
