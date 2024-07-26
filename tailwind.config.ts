@@ -16,7 +16,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				furry: "url('https://blog-oss.allenyou.top/image/658ad4c208349.png')",
+				furry: "url('https://blog-oss.allenyou.top/image/66a3b9771b90d.jpg')",
 			},
 			height: {
 				"18": "4.5rem",
@@ -25,7 +25,7 @@ const config: Config = {
 				"4xl": "56rem",
 			},
 			colors: {
-				primary: "#6db0ec",
+				primary: "#a8422e",
 			},
 			fontFamily: {
 				crf: ["ChillRoundF"],
