@@ -1,12 +1,12 @@
 export const config = {
 	blog: {
-		hostname: "www.allenyou.wang",
-		title: `秋实-Allenyou的小窝`,
-		description: "稻花香里说丰年，听取WA声一片",
+		hostname: "docs.zlight106.top",
+		title: `紫光的小图书馆`,
+		description: "zlight106呼啸而过",
 	},
 	author: {
 		name: "紫光-GA106",
-		email: "example@test.com",
+		email: "zlight106@gmai.com",
 	},
 	comment: {
 		api: "https://waline.allenyou.wang/",
