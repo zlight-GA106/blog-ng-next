@@ -6,7 +6,7 @@ export const config = {
 	},
 	author: {
 		name: "紫光-GA106",
-		email: "zlight106@gmai.com",
+		email: "zlight106@gmail.com",
 	},
 	comment: {
 		api: "https://waline.allenyou.wang/",
