@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import AllenyouLink from "./AllenyouLink";
 import { config } from "@/libs/config";
+import { navigations } from "@/data/navigation";
 
 export default function MobileMenu() {
 	const [vis, setVis] = useAtom(mobileMenuVis);
@@ -34,26 +35,15 @@ export default function MobileMenu() {
 				<FontAwesomeIcon icon={faXmark} />
 			</button>
 			<ul className="text-3xl text-primary mt-40 flex flex-col gap-12">
-				<li>
-					<AllenyouLink className="hover:opacity-80" href="/">
-						首页
-					</AllenyouLink>
-				</li>
-				<li>
-					<AllenyouLink className="hover:opacity-80" href="/friend/">
-						友链
-					</AllenyouLink>
-				</li>
-				<li>
-					<AllenyouLink className="hover:opacity-80" href="/board/">
-						留言
-					</AllenyouLink>
-				</li>
-				<li>
-					<AllenyouLink className="hover:opacity-80" href="/about/">
-						关于
-					</AllenyouLink>
-				</li>
+				{navigations.map((v) => {
+					return (
+						<li key={v.href}>
+							<AllenyouLink className="hover:opacity-80" href={v.href}>
+								{v.title}
+							</AllenyouLink>
+						</li>
+					);
+				})}
 			</ul>
 			<p className="text-xl align-baseline absolute bottom-4 left-4">
 				Copyright © 2024-{new Date().getFullYear()} {config.author.name}
