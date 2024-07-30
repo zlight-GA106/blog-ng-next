@@ -54,13 +54,6 @@ export default function MobileMenu() {
 						关于
 					</AllenyouLink>
 				</li>
-				<li>
-					<AllenyouLink
-						className="hover:opacity-80"
-						href="https://www.travellings.cn/go.html">
-						开往
-					</AllenyouLink>
-				</li>
 			</ul>
 			<p className="text-xl align-baseline absolute bottom-4 left-4">
 				Copyright © 2024-{new Date().getFullYear()} {config.author.name}
