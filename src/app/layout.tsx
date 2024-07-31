@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
 import GoToTop from "@/components/GoToTop";
 import MobileMenu from "@/components/MobileMenu";
-import { Matomo } from "@/components/Matomo";
 import { DarkModeClient } from "@/components/DarkModeClient";
 
 export default function RootLayout({
