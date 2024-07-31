@@ -8,6 +8,7 @@ import getAvatar from "@/libs/getAvatar";
 import MobileNavSwitcher from "./MobileMenuSwitcher";
 import AllenyouLink from "./AllenyouLink";
 import { config } from "@/libs/config";
+import { navigations } from "@/data/navigation";
 
 export default function Navigation() {
 	const [shouldExpand, setShouldExpand] = useState(false);
@@ -61,23 +62,13 @@ export default function Navigation() {
 					/>
 				</AllenyouLink>
 				<ul className="hidden md:flex justify-center gap-8">
-					<li>
-						<AllenyouLink href="/">首页</AllenyouLink>
-					</li>
-					<li>
-						<AllenyouLink href="/friend/">友链</AllenyouLink>
-					</li>
-					<li>
-						<AllenyouLink href="/board/">留言</AllenyouLink>
-					</li>
-					<li>
-						<AllenyouLink href="/about/">关于</AllenyouLink>
-					</li>
-					{/* <li>
-						<AllenyouLink href="https://www.travellings.cn/go.html">
-							开往
-						</AllenyouLink>
-					</li> */}
+					{navigations.map((v) => {
+						return (
+							<li key={v.href}>
+								<AllenyouLink href={v.href}>{v.title}</AllenyouLink>
+							</li>
+						);
+					})}
 				</ul>
 				<MobileNavSwitcher />
 				<DarkModeSwitcher />

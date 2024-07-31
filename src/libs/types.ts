@@ -19,3 +19,7 @@ export type TocType = {
 	child: TocType[];
 	parent?: TocType;
 };
+export type NavigationType = {
+	title: string;
+	href: string;
+};
