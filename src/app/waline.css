@@ -3,8 +3,8 @@
 	--waline-white: #fff;
 	--waline-light-grey: #999;
 	--waline-dark-grey: #666;
-	--waline-theme-color: rgb(137, 195, 235);
-	--waline-active-color: rgba(137, 195, 235, 0.8);
+	--waline-theme-color: rgb(168, 66, 46);
+	--waline-active-color: rgba(168, 66, 46, 0.8);
 	--waline-color: #444;
 	--waline-bgcolor: #fff;
 	--waline-bgcolor-light: #f8f8f8;
@@ -16,7 +16,7 @@
 	--waline-bq-color: #f0f0f0;
 	--waline-avatar-size: 4rem;
 	--waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
-	--waline-badge-color: #89c3eb;
+	--waline-badge-color: #a8422e;
 	--waline-badge-font-size: 0.75em;
 	--waline-info-bgcolor: #f8f8f8;
 	--waline-info-color: #999;
