@@ -9,7 +9,7 @@ export const config = {
 		email: "zlight106@gmail.com",
 	},
 	comment: {
-		api: "https://waline.allenyou.wang/",
+		api: "https://waline.zlight106.top/",
 	},
 	gravatar_mirror: "https://blog-oss.allenyou.top/avatar/",
 };

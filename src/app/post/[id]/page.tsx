@@ -50,7 +50,7 @@ export default async function PostPage({
 					id={params.id}
 					author={config.author.name}
 				/>
-				{/* <Comments /> */}
+				<Comments />
 			</div>
 			<Toc toc={toc} />
 		</>

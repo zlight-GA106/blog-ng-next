@@ -55,7 +55,7 @@ export default async function LinkPage() {
 				{postContent}
 			</div>
 			<div className="gap-4 grid grid-cols-1 md:grid-cols-2">{linkList}</div>
-			{/* <Comments /> */}
+			<Comments />
 		</div>
 	);
 }
