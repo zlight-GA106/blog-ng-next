@@ -1,17 +1,16 @@
 import { Comments } from "@/components/Comments";
 import Copyright from "@/components/Copyright";
-import OutdateTip from "@/components/OutdateTip";
 import Toc from "@/components/Toc";
 import { config } from "@/libs/config";
-import { initCMS } from "@/libs/contents";
+import { initCMS_essay } from "@/libs/contents";
 import { generateMetadata } from "@/libs/generateMetadata";
 import parseMarkdown, { parseToc } from "@/libs/parseMarkdown";
 import { notFound } from "next/navigation";
 
-export var metadata = generateMetadata(`文章`);
+export var metadata = generateMetadata(`杂文`);
 
 export async function generateStaticParams() {
-	const cms = initCMS();
+	const cms = initCMS_essay();
 	return cms.postIds.map((i) => {
 		return {
 			id: i.toString(),
@@ -26,7 +25,7 @@ export default async function PostPage({
 		id: number;
 	};
 }) {
-	const cms = initCMS();
+	const cms = initCMS_essay();
 	const post = cms.getPost(params.id);
 	if (post === undefined) {
 		notFound();
@@ -41,13 +40,12 @@ export default async function PostPage({
 				<p className="opacity-60 my-2">
 					{post.created_at.toLocaleDateString()}
 				</p>
-				<OutdateTip created={post.modified_at.toDateString()} />
 				<div className="prose prose-ay dark:prose-invert max-w-4xl break-all my-8">
 					{postContent}
 				</div>
 				<Copyright
 					title={post.title}
-					url={`https://${config.blog.hostname}/post/${params.id}`}
+					url={`https://${config.blog.hostname}/post/essay/${params.id}`}
 					author={config.author.name}
 				/>
 				<Comments />

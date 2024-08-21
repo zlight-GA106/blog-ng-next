@@ -6,20 +6,22 @@ import path from "path";
 import fm from "front-matter";
 import getOrDefault from "./getOrDefault";
 
-class CMS {
+export class CMS {
 	links: LinkType[] = [];
 	postIds: number[] = [];
 	private postContents: PostType[] = [];
-	constructor() {
+	constructor(subdir: string | undefined = undefined) {
 		this.links = ln;
-		const files = readdirSync(path.join(process.cwd(), "src", "data", "posts"));
+		const p =
+			subdir === undefined
+				? path.join(process.cwd(), "src", "data", "posts")
+				: path.join(process.cwd(), "src", "data", "posts", subdir);
+		const files = readdirSync(p);
 		files.forEach((filename) => {
 			if (!filename.endsWith(".md")) {
 				return;
 			}
-			const data = readFileSync(
-				path.join(process.cwd(), "src", "data", "posts", filename)
-			);
+			const data = readFileSync(path.join(p, filename));
 			const ret = fm(data.toString());
 			const attr: any = ret.attributes;
 			this.postContents.push({
@@ -68,5 +70,16 @@ export const initCMS = (): CMS => {
 	}
 	const cms = new CMS();
 	INSTANCE = cms;
+	return cms;
+};
+
+var INSTANCE_ESSAY: CMS | null = null;
+
+export const initCMS_essay = (): CMS => {
+	if (INSTANCE_ESSAY !== null) {
+		return INSTANCE_ESSAY;
+	}
+	const cms = new CMS("essay");
+	INSTANCE_ESSAY = cms;
 	return cms;
 };

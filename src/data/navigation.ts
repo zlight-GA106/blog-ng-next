@@ -6,6 +6,10 @@ export const navigations: NavigationType[] = [
 		href: "/",
 	},
 	{
+		title: "杂文",
+		href: "/essay/",
+	},
+	{
 		title: "友链",
 		href: "/friend/",
 	},

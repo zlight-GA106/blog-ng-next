@@ -7,11 +7,11 @@ import { faCreativeCommons } from "@fortawesome/free-brands-svg-icons";
 export default function Copyright({
 	title,
 	author,
-	id,
+	url,
 	cc,
 }: {
 	title: string;
-	id: number;
+	url: string;
 	author?: string;
 	cc?: string;
 }) {
@@ -26,7 +26,9 @@ export default function Copyright({
 			<p className="text-lg font-medium">{title}</p>
 			<AllenyouLink
 				className="text-primary underline dark:text-primary/80"
-				href={`https://${config.blog.hostname}/post/${id}`}>{`https://${config.blog.hostname}/post/${id}`}</AllenyouLink>
+				href={url}>
+				{url}
+			</AllenyouLink>
 			<div className="mt-4 flex-row flex-nowrap justify-start gap-4 flex">
 				<div>
 					<p className="font-bold row-span-1">本文作者</p>
