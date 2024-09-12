@@ -1,6 +1,6 @@
 ---
 id: 8
-title: "[ROS]基于TR-master和ocr的车牌识别
+title: "[ROS]基于TR-master和ocr的车牌识别（代码解析）"
 created_at: 2024-9-10T16:23:29Z
 modified_at: 2024-9-10T16:23:29Z
 description: 机器人操作系统学习记录
